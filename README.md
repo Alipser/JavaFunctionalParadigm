@@ -22,3 +22,14 @@ El Stream API permite realizar operaciones funcionales sobre colecciones de dato
 
 7. Uso de Optional
 Optional es una clase contenedora que puede o no contener un valor no nulo. Se usa para representar valores que pueden estar presentes o ausentes, evitando el uso de null y reduciendo el riesgo de NullPointerException.
+
+
+| **Interfaz Funcional** | **Descripción** | **Método Principal** | **Parámetros** | **Tipo de Retorno** |
+|-------------------------|-----------------|----------------------|----------------|---------------------|
+| **Consumer**            | Representa una operación que acepta un único argumento de entrada y no retorna ningún resultado. | `accept(T t)` | T | void |
+| **Supplier**            | Representa una función que no toma argumentos y proporciona un resultado. | `get()` | None | T |
+| **Function**            | Representa una función que acepta un argumento y produce un resultado. | `apply(T t)` | T | R |
+| **BiFunction**          | Representa una función que acepta dos argumentos y produce un resultado. | `apply(T t, U u)` | T, U | R |
+| **UnaryOperator**       | Es una especialización de `Function` para operaciones que toman un solo argumento y retornan un resultado del mismo tipo. | `apply(T t)` | T | T |
+| **BinaryOperator**      | Es una especialización de `BiFunction` para operaciones que toman dos argumentos del mismo tipo y retornan un resultado del mismo tipo. | `apply(T t, T u)` | T, T | T |
+
